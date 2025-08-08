@@ -1,0 +1,28 @@
+# Core dependencies
+openai>=1.0.0
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+python-dotenv>=1.0.0
+
+# Web scraping and automation
+selenium>=4.0.0
+undetected-chromedriver>=3.5.0
+chromedriver-autoinstaller>=0.6.0
+
+# Financial data
+yfinance>=0.2.0
+pandas>=1.5.0
+
+# Scheduling and timezone
+schedule>=1.2.0
+pytz>=2023.3
+
+# HTTP requests
+requests>=2.31.0
+httpx>=0.24.0
+
+# Image processing (for screenshots)
+Pillow>=10.0.0
+
+# Additional utilities
+tqdm>=4.65.0 

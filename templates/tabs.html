@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Trading Dashboard{% endblock %}</title>
+    {% block head %}{% endblock %}
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .nav { background-color: #333; overflow: hidden; }
+        .nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .nav a:hover { background-color: #575757; }
+        .nav a.active { background-color: #04AA6D; }
+        .container { padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Dashboard</a>
+        <a href="/trades" class="{{ 'active' if request.path.startswith('/trades') else '' }}">Trades</a>
+        <a href="/summaries" class="{{ 'active' if request.path.startswith('/summaries') else '' }}">Summaries</a>
+        <a href="/feedback" class="{{ 'active' if request.path.startswith('/feedback') else '' }}">Feedback</a>
+    </div>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>
